@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "wimi",
+  "name": "NetIP",
   "version": "0.7.1",
-  "description": "Your public IP address from clean.myip.wtf to your browser",
+  "description": "NetIP relays information about your public IP address via clean.myip.wtf/json",
   "action": {
     "default_popup": "/html/browseraction.html"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "wimi",
+  "name": "NetIP",
   "version": "0.7.1",
   "webExt": {
     "sourceDir": "build/production"
