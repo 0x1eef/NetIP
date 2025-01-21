@@ -46,7 +46,8 @@ extension on both Chromium and Firefox.
 
 * [github.com/@0x1eef](https://github.com/0x1eef/NetIP#readme)
 * [gitlab.com/@0x1eef](https://gitlab.com/0x1eef/NetIP#about)
-* [bsd.cafe/@0x1eef](https://brew.bsd.cafe/0x1eef/NetIP)
+* [bsd.cafe/@0x1eef](https://brew.bsd.cafe/0x1eef/NetIP#readme)
+* [hardenedbsd.org/@0x1eef](https://git.hardenedbsd.org/0x1eef/NetIP#about)
 
 ## Credit
 
