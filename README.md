@@ -62,6 +62,6 @@ who authored the following icons:
 
 ## License
 
-[The MIT License](https://choosealicense.com/licenses/MIT/)
+[BSD Zero Clause](https://choosealicense.com/licenses/0bsd/)
 <br>
 See [LICENSE](./share/NetIP/LICENSE)
