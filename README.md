@@ -16,9 +16,9 @@ extension on both Chromium and Firefox.
 
 #### Build
 
-* Produce the `build/` directory.
+* Produce the `build/` directory. <br>
   [Deno](https://deno.com/) should be installed, or the build
-  won't work. No nodejs dependencies are required:
+  won't work. <br> No nodejs dependencies are required:
 
         $ git clone https://github.com/0x1eef/NetIP
         $ cd NetIP
@@ -30,7 +30,7 @@ extension on both Chromium and Firefox.
     * Visit `chrome://extensions`
     * Check `Developer mode` (top right hand corner)
     * Click `Load unpacked extension`
-    * Choose the `build/production/` directory from the file dialog
+    * Choose the `build/` directory from the file dialog
     * Done
 
 #### Install (Firefox)
@@ -40,7 +40,7 @@ extension on both Chromium and Firefox.
   * Click the gear icon (top right hand corner)
   * Click "Debug Add-ons"
   * Click "Load Temporary Add-on"
-  * Choose the `build/production/manifest.json` file from the file dialog
+  * Choose the `build/manifest.json` file from the file dialog
   * Done
 
 ## Sources
