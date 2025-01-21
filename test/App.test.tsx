@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-import { render, screen, act } from "@testing-library/preact";
-import { App } from "~/components/App";
+//import { render, screen, act } from "@testing-library/preact";
+import { App } from "../src/js/components/App";
 import { getMessage } from "./mocks/chrome.i18n";
 import { success, error, loading } from "./mocks/fetch";
 
@@ -9,6 +9,7 @@ describe("App.tsx", () => {
   const globalFetch = global.fetch;
 
   beforeEach(() => {
+    console.log(getMessage);
     const chrome: any = { i18n: { getMessage } };
     global.chrome = chrome;
   });

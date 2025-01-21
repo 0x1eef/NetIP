@@ -8,7 +8,7 @@ dependencies are
 [TypeScript](https://www.typescriptlang.org/),
 [preact](https://preactjs.com/),
 and
-[webpack](https://webpack.js.org/). See the [Install](#install)
+[Deno](https://deno.com/). See the [Install](#install)
 instructions for details on how to build and sideload the
 extension on both Chromium and Firefox.
 
@@ -16,12 +16,13 @@ extension on both Chromium and Firefox.
 
 #### Build
 
-* Produce the `build/` directory
+* Produce the `build/` directory.
+  [Deno](https://deno.com/) should be installed, or the build
+  won't work. No nodejs dependencies are required:
 
         $ git clone https://github.com/0x1eef/NetIP
         $ cd NetIP
-        $ npm i
-        $ npm run build:production
+        $ make build
 
 #### Install (Chromium)
 

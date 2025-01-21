@@ -1,5 +1,6 @@
-import { useWebService } from "~/hooks/useWebService";
-import { useEffect } from "preact/hooks";
+import { useWebService } from "../hooks/useWebService.ts";
+import { useEffect } from "https://esm.sh/preact/hooks";
+import "@types/chrome";
 
 export function App() {
   const [response, error] = useWebService();
@@ -12,7 +13,7 @@ export function App() {
       chrome.action.setTitle({ title: "There was an error. Try again" });
       chrome.action.setIcon({ path: "/images/icon512x512.png" });
     }
-  }, [response?.CountryCode, error.message]);
+  }, [response?.CountryCode, error?.message]);
 
   if (response) {
     return (

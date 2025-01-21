@@ -1,0 +1,14 @@
+#!/bin/sh
+
+##
+# vars
+sourcedir="src/"
+targetdir="build/"
+
+##
+# main
+find -E "${sourcedir}" \
+     -maxdepth 1 \
+     -mindepth 1 \
+     -iregex 'src/(html|css|fonts|images|_locales|manifest.json)' \
+     -exec cp -Rfv "{}" "${targetdir}" \;

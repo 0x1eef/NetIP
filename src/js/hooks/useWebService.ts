@@ -1,5 +1,5 @@
-import { useEffect, useState } from "preact/hooks";
-import { TResponse, Response } from "~/lib/response";
+import { useEffect, useState } from "https://esm.sh/preact/hooks";
+import { TResponse, Response } from "../lib/response.ts";
 
 type Maybe<T> = T | null;
 

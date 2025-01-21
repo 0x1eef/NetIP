@@ -1,0 +1,17 @@
+{
+  "imports": {
+    "@types/chrome": "npm:@types/chrome",
+    "preact": "npm:preact",
+  },
+  "tasks": {
+    "build:clean": "rm -rf build/",
+    "build:copy": "make build",
+    "build:bundle": "echo 'bye'"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "lib": [ "ES2020", "DOM" ],
+  }
+}
