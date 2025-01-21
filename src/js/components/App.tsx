@@ -1,7 +1,19 @@
 import { useWebService } from "~/hooks/useWebService";
+import { useEffect } from "preact/hooks";
 
 export function App() {
   const [response, error] = useWebService();
+
+  useEffect(() => {
+    if (response) {
+      chrome.action.setTitle({ title: response.IPAddress });
+      chrome.action.setIcon({ path: `/images/flags/${response.CountryCode}.svg` });
+    } else if (error) {
+      chrome.action.setTitle({ title: "There was an error. Try again" });
+      chrome.action.setIcon({ path: "/images/icon512x512.png" });
+    }
+  }, [response?.CountryCode, error.message]);
+
   if (response) {
     return (
       <div data-testid="response" className="h-14 flex flex-col justify-center">
