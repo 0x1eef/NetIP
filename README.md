@@ -23,7 +23,7 @@ extension on both Chromium and Firefox.
         $ npm i
         $ npm run build:production
 
-#### Install (chromium)
+#### Install (Chromium)
 
 * Load the extension
     * Visit `chrome://extensions`
