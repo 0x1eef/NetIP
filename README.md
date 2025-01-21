@@ -8,15 +8,13 @@ dependencies are
 [TypeScript](https://www.typescriptlang.org/),
 [preact](https://preactjs.com/),
 and
-[webpack](https://webpack.js.org/).
-The extension can be built locally and installed as a
-developer extension / addon on both Chromium and FireFox.
-FireFox users can install the extension as an addon
-via the [mozilla store](https://addons.mozilla.org/en-US/firefox/addon/97c865f874d543128d35/).
+[webpack](https://webpack.js.org/). See the [Install](#install)
+instructions for details on how to build and sideload the
+extension on both Chromium and Firefox.
 
 ## Install
 
-**Chromium|Chrome**
+#### Build
 
 * Produce the `build/` directory
 
@@ -25,6 +23,8 @@ via the [mozilla store](https://addons.mozilla.org/en-US/firefox/addon/97c865f87
         $ npm i
         $ npm run build:production
 
+#### Install (chromium)
+
 * Load the extension
     * Visit `chrome://extensions`
     * Check `Developer mode` (top right hand corner)
@@ -32,17 +32,32 @@ via the [mozilla store](https://addons.mozilla.org/en-US/firefox/addon/97c865f87
     * Choose the `build/production/` directory from the file dialog
     * Done
 
-**Firefox**
+#### Install (Firefox)
 
-NetIP can be installed [from mozilla's store](https://addons.mozilla.org/en-US/firefox/addon/97c865f874d543128d35/).
-The add-on can also be built locally and side-loaded - similar
-to the process that was described for **Chromium|Chrome** users.
+* Load the extension
+  * Visit `about:addons`
+  * Click the gear icon (top right hand corner)
+  * Click "Debug Add-ons"
+  * Click "Load Temporary Add-on"
+  * Choose the `build/production/manifest.json` file from the file dialog
+  * Done
 
 ## Sources
 
 * [github.com/@0x1eef](https://github.com/0x1eef/NetIP#readme)
 * [gitlab.com/@0x1eef](https://gitlab.com/0x1eef/NetIP#about)
 * [bsd.cafe/@0x1eef](https://brew.bsd.cafe/0x1eef/NetIP)
+
+## Credit
+
+Credit to
+[becris](https://www.flaticon.com/authors/becris)
+who authored the following icons:
+
+* src/images/icon16x16.png
+* src/images/icon64x64.png
+* src/images/icon256x256.png
+* src/images/icon512x512.png
 
 ## License
 

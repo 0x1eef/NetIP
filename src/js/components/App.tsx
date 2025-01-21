@@ -26,7 +26,7 @@ export function App() {
     return (
       <div data-testid="loading" className="h-14 flex flex-col justify-center">
         <div className="flex flex-col items-center h-full min-w-48 justify-center">
-          <img data-testid="spin" className="w-6 h-6" src="/images/icon.svg" />
+          <img data-testid="spin" className="w-6 h-6" src="/images/icon256x256.png" />
         </div>
       </div>
     );
