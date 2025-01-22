@@ -18,7 +18,7 @@ extension on both Chromium and Firefox.
 
 * Produce the `build/` directory. <br>
   [Deno](https://deno.com/) should be installed, or the build
-  won't work. <br> No nodejs dependencies are required:
+  won't work. <br> nodejs is not required:
 
         $ git clone https://github.com/0x1eef/NetIP
         $ cd NetIP
