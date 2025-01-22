@@ -1,6 +1,6 @@
+/// <reference path="../types/chrome.d.ts" />
 import { useWebService } from "../hooks/useWebService.ts";
 import { useEffect } from "https://esm.sh/preact/hooks";
-import "@types/chrome";
 
 export function App() {
   const [response, error] = useWebService();

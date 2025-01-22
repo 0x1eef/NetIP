@@ -8,8 +8,8 @@ await build({
   format: "esm",
   platform: "browser",
   sourcemap: true,
-  minify: true,
-  external: ["@types/chrome"],
+  minify: false,
+  external: [],
   plugins: [...denoPlugins()],
 });
 
