@@ -1,4 +1,4 @@
-import { useEffect, useState } from "https://esm.sh/preact/hooks";
+import { useEffect, useState } from "npm:preact/hooks";
 import { TResponse, Response } from "../lib/response.ts";
 
 type Maybe<T> = T | null;
