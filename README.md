@@ -6,7 +6,7 @@ from
 to your browser. The primary development and runtime
 dependencies are
 [TypeScript](https://www.typescriptlang.org/),
-[preact](https://preactjs.com/),
+[PreactJS](https://preactjs.com/),
 and
 [Deno](https://deno.com/). See the [Install](#install)
 instructions for details on how to build and sideload the
