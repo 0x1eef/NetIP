@@ -1,21 +1,17 @@
 /// <reference path="../types/chrome.d.ts" />
-
 import React from "npm:preact/compat";
-import { useEffect } from "npm:preact/hooks";
 import { useWebService } from "../hooks/useWebService.ts";
 
 export function App() {
   const [response, error] = useWebService();
 
-  useEffect(() => {
-    if (response) {
-      chrome.action.setTitle({ title: response.IPAddress });
-      chrome.action.setIcon({ path: `/images/flags/${response.CountryCode}.svg` });
-    } else if (error) {
-      chrome.action.setTitle({ title: "There was an error. Try again" });
-      chrome.action.setIcon({ path: "/images/icon512x512.png" });
-    }
-  }, [response?.CountryCode, error?.message]);
+  if (response) {
+    chrome.action.setTitle({ title: response.IPAddress });
+    chrome.action.setIcon({ path: `/images/flags/${response.CountryCode}.svg` });
+  } else if (error) {
+    chrome.action.setTitle({ title: "There was an error. Try again" });
+    chrome.action.setIcon({ path: "/images/icon512x512.png" });
+  }
 
   if (response) {
     return (
