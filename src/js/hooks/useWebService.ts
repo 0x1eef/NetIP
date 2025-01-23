@@ -7,7 +7,6 @@ export function useWebService(): [Maybe<TResponse>, Maybe<Error>] {
   const endpoint = "https://clean.myip.wtf/json";
   const [response, setResponse] = useState<Maybe<TResponse>>(null);
   const [error, setError] = useState<Maybe<Error>>(null);
-  const options: RequestInit = { cache: "no-store" };
 
   function receive(res: Response) {
     if (res.status === 200) {
@@ -19,10 +18,13 @@ export function useWebService(): [Maybe<TResponse>, Maybe<Error>] {
   }
 
   useEffect(() => {
+    const ac = new AbortController();
+    const options: RequestInit = { cache: "no-store", signal: ac.signal };
     fetch(endpoint, options)
       .then(receive)
       .then(json => setResponse(Response(json)))
-      .catch(err => setError(err));
+      .catch(err => err.name !== "AbortError" ? setError(err) : null);
+    return () => ac.abort();
   }, []);
 
   return [response, error];
