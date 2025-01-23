@@ -20,5 +20,8 @@ export async function error(_path: TFetchPath, _options?: TFetchOptions) {
 }
 
 export async function loading(_path: TFetchPath, _options?: TFetchOptions) {
-  return null;
+  return {
+    status: 200,
+    json: async () => new Promise(() => {})
+  }
 }
