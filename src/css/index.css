@@ -26,7 +26,7 @@ body {
   }
 }
 
-img[data-testid="spin"] {
+div[data-testid="loading"] img {
   animation: rotate 2s linear infinite;
 }
 
