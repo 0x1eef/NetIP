@@ -29,7 +29,7 @@ export function App() {
     return (
       <div data-testid="error" className="h-14 flex flex-col justify-center">
         <div className="p-2 flex items-center h-full min-w-48 justify-center">
-          <img data-testid="error" className="w-6 h-6" src="/images/icon.svg" />
+          <img className="w-6 h-6" src="/images/icon.svg" />
         </div>
       </div>
     );

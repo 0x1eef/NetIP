@@ -30,7 +30,7 @@ img[data-testid="spin"] {
   animation: rotate 2s linear infinite;
 }
 
-img[data-testid="error"] {
+div[data-testid="error"] img {
   transition: filter 0.3s ease;
   filter: drop-shadow(0 0 20px var(--error-color))
           drop-shadow(0 0 10px var(--error-color));

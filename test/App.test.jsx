@@ -11,10 +11,11 @@ import { success, error } from "./mocks/fetch.ts";
 
 const globalChrome = globalThis.chrome;
 const globalFetch  = globalThis.fetch;
+const chrome = { action: { setIcon, setTitle }, i18n: { getMessage } };
 
 describe("App.tsx: ok response", () => {
   beforeEach(() => {
-    globalThis.chrome = { action: { setIcon, setTitle }, i18n: { getMessage } };
+    globalThis.chrome = chrome;
     globalThis.fetch  = success;
   });
 
@@ -25,6 +26,23 @@ describe("App.tsx: ok response", () => {
 
   it("renders a response", async () => {
     await act(async () => { render(<App/>) });
-    expect(await screen.findByTestId("response"), {timeout: 3000}).not.toBeNull()
+    expect(await screen.findByTestId("response")).not.toBeNull();
+  });
+});
+
+describe("App.tsx: error response", () => {
+  beforeEach(() => {
+    globalThis.chrome = chrome;
+    globalThis.fetch  = error;
+  });
+
+  afterEach(() => {
+    globalThis.chrome = globalChrome;
+    globalThis.fetch = globalFetch;
+  });
+
+  it("renders an error", async () => {
+    await act(async () => { render(<App/>) });
+    expect(await screen.findByTestId("error")).not.toBeNull();
   });
 });
