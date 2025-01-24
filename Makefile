@@ -1,8 +1,10 @@
+targetdir ?= build/
+
 clean:
-	rm -rf build/
+	rm -rf $(targetdir)
 
 mkdir:
-	mkdir build/
+	mkdir -p $(targetdir)
 
 copy:
 	sh/copy
