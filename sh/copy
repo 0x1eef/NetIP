@@ -3,7 +3,7 @@
 ##
 # vars
 sourcedir="src/"
-targetdir="build/"
+targetdir="${targetdir:-build/}"
 
 ##
 # main
