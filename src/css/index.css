@@ -7,12 +7,12 @@
 }
 
 @font-face {
-  font-family: "Kanit Regular";
-  src: url("/fonts/kanit-regular.ttf") format("truetype");
+  font-family: "Noto Sans";
+  src: url("/fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
 }
 
 body {
-  font-family: "Kanit Regular";
+  font-family: "Noto Sans", sans-serif;
   background: var(--primary-color);
   color: var(--secondary-color);
 }
